@@ -6,9 +6,11 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            /* my first program in C# */
+            /* Menampilkan teks */
             Console.WriteLine("Hello World");
-            Console.ReadKey();
+
+            /* Membaca teks yang diinputkan dari keyboard */
+            Console.ReadLine();
         }
     }
 }
