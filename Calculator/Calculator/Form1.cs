@@ -16,5 +16,10 @@ namespace Calculator
         {
             InitializeComponent();
         }
+
+        private void button0_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text + 0;
+        }
     }
 }
