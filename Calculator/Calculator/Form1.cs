@@ -95,22 +95,6 @@ namespace Calculator
             textBox1.Text = textBox1.Text + 9;
         }
 
-        private void buttonDivision_Click(object sender, EventArgs e)
-        {
-            num1 = float.Parse(textBox1.Text);
-            textBox1.Clear();
-            textBox1.Focus();
-            count = 4;
-        }
-
-        private void buttonMultiplication_Click(object sender, EventArgs e)
-        {
-            num1 = float.Parse(textBox1.Text);
-            textBox1.Clear();
-            textBox1.Focus();
-            count = 3;
-        }
-
         private void buttonSubstraction_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "")
@@ -130,25 +114,52 @@ namespace Calculator
             count = 2;
         }
 
+        private void buttonMultiplication_Click(object sender, EventArgs e)
+        {
+            num1 = float.Parse(textBox1.Text);
+            textBox1.Clear();
+            textBox1.Focus();
+            count = 3;
+        }
+
+        private void buttonDivision_Click(object sender, EventArgs e)
+        {
+            num1 = float.Parse(textBox1.Text);
+            textBox1.Clear();
+            textBox1.Focus();
+            count = 4;
+        }
+
         private void buttonPoint_Click(object sender, EventArgs e)
         {
-            int c = textBox1.TextLength;
-            int flag = 0;
-            string text = textBox1.Text;
-            for (int i = 0; i < c; i++)
+            // int c = textBox1.TextLength;
+            // int flag = 0;
+            // string text = textBox1.Text;
+
+            // for (int i = 0; i < c; i++)
+            // {
+            //     if (text[i].ToString() == ",")
+            //     {
+            //         flag = 1; break;
+            //     }
+            //     else
+            //     {
+            //         flag = 0;
+            //     }
+            // }
+
+            // if (flag == 0)
+            // {
+            //     textBox1.Text = textBox1.Text + ",";
+            // }
+
+            if (textBox1.Text.Contains(","))
             {
-                if (text[i].ToString() == ".")
-                {
-                    flag = 1; break;
-                }
-                else
-                {
-                    flag = 0;
-                }
+                textBox1.Text = textBox1.Text;
             }
-            if (flag == 0)
+            else
             {
-                textBox1.Text = textBox1.Text + ".";
+                textBox1.Text = textBox1.Text + ",";
             }
         }
 
