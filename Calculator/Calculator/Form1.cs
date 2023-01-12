@@ -19,6 +19,7 @@ namespace Calculator
         {
             InitializeComponent();
             textBox1.Text = "0";
+            this.ActiveControl = buttonClear;
         }
 
         public void compute(int count)
